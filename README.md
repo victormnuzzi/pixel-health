@@ -11,6 +11,7 @@ Pixel Health é uma solução inovadora fictícia que combina elementos de jogos
 - React Hook Form
 - JSON Server
 - Yup
+- SCSS
 
 ## Informações de acesso 🔐
 
