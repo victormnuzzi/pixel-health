@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { /* useState, useEffect */ } from 'react';
 
 import { useForm } from 'react-hook-form';
 
@@ -17,7 +17,7 @@ function Login(){
             resolver: yupResolver(schema)
         })
 
-    const [usuarios, setUsuarios] = useState([]);
+    /* const [usuarios, setUsuarios] = useState([]);
 
     useEffect(() => {
         fetch('http://localhost:5000/usuarios')
@@ -27,7 +27,7 @@ function Login(){
             .then((resposta) => {
                 setUsuarios(resposta);
             })
-    }, []);
+    }, []); */
 
     const validarFormulario = (data) => {
         let usuarioValido = false;
@@ -35,8 +35,8 @@ function Login(){
         if (data.usuario == '' || data.senha == "") {
             alert("Por favor, preencha todos os campos.")
         } else {
-            for (const usuarioDados of usuarios) {
-                if (data.usuario === usuarioDados.usuario && data.senha === usuarioDados.senha || data.usuario == 'admin' && data.senha == "1234") {
+            //for () {
+                if ( /*data.usuario === usuarioDados.usuario && data.senha === usuarioDados.senha */data.usuario === 'admin' && data.senha === "1234") {
                     let token = Math.random().toString(20).substring(2) +
                         Math.random().toString(20).substring(2);
                     sessionStorage.setItem('usuario', data.usuario);
@@ -44,9 +44,9 @@ function Login(){
                     usuarioValido = true;
                     alert("Seus dados foram registrados com sucesso.")
                     window.location.reload()
-                    break;
+                    //break;
                 }
-            }
+            //}
         }
 
         if (!usuarioValido) {
