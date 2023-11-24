@@ -20,7 +20,7 @@ Ao abrir o projeto, no Login, você deverá inserir os seguintes dados:
 
 Após isso, você deverá clicar no botão "Login", logo abaixo dos campos de input para acessar a Home do site.
 
-## Funcionalidades ⚙️
+## Funcionalidades 🔧
 
 ### Autenticação 
 
@@ -35,3 +35,19 @@ As credenciais do usuário (nome de usuário e senha) são armazenadas na sessio
 
 - Uma vez autenticados, os usuários podem visualizar suas informações no cabeçalho de navegação.
 - O menu de navegação inclui opções para visualizar detalhes do usuário e fazer logout.
+
+## Configuração do Projeto ⚙️
+
+Instale as dependências:
+
+    npm install
+
+Execute o servidor JSON para o backend:
+
+    npm run backend
+
+Inicie o servidor de desenvolvimento:
+
+    npm run dev
+
+Acesse a aplicação em http://localhost:3000 no seu navegador.
