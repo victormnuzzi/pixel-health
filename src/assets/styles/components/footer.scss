@@ -1,0 +1,18 @@
+@use '../var.scss';
+
+.footer {
+    width: 100%;
+    height: 80px;
+    background-color: var.$primary-color;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    padding: 0 5%;
+    text-align: center;
+
+    &-title {
+        font-size: 1.1rem;
+    }
+
+}

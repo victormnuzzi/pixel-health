@@ -1,0 +1,10 @@
+{
+    "usuarios": [
+      {
+        "id": 1,
+        "usuario": "admin",
+        "email": "admin@projetox.com.br",
+        "senha": "1234"
+      }
+    ]
+  }

@@ -1,0 +1,324 @@
+@use '../var.scss';
+
+main {
+    min-height: calc(100vh - 80px);
+    padding: 4% 8%;
+    color: var.$primary-color;
+
+    .container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
+        box-sizing: border-box;
+        background-color: var.$bg-color;
+        border-bottom: 2px solid var.$primary-color;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+
+        
+        .hero-container {
+            display: flex;
+            flex-direction: column;
+            background-color: #252034;
+            color: var.$bg-color;
+            border-top-left-radius: 20px;
+            
+            .hero-img {
+                max-width: 100%;
+                height: 60%;
+                border-top-left-radius: 20px;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    border-top-right-radius: 0;
+                    border-top-left-radius: 20px;
+                }
+            }
+
+            .hero-text {
+                height: 100%;
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: space-around;
+                padding: 7%;
+                gap: 16px;
+                text-align: center;
+                border-right: 2px solid var.$primary-color;
+                color: white;
+
+                h1 {
+                    font-size: 6.5rem;
+                    width: 80%;
+                }
+                
+                p {
+                    width: 80%;
+                    font-size: 2rem;  
+                }
+                
+            }  
+
+            /*Tela <= 1428*/
+            @media only screen and (max-width: 1428px){
+                border-top-right-radius: 20px;
+
+                .hero-img {
+
+                    img {
+                        border-top-right-radius: 20px;
+                    }
+                }
+
+                .hero-text {
+
+                    flex-direction: column;
+                    padding: 5% 15%;
+                    border-bottom: 2px solid var.$primary-color;
+                    border-right: 0;
+    
+                    h1 {
+                        width: 100%;
+                    }
+                    
+                    p {
+                        width: 100%;
+                    }
+                    
+                }
+        }
+    }
+        
+    .aside-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        padding: 4%;          
+        
+        .article-container {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            padding: 5% 3%;
+            
+            h3 {
+                font-size: 3rem;
+            }
+            
+            p {
+                font-size: 1.8rem;
+                line-height: 2rem;
+            }
+        }     
+
+        .border {
+            border-top: 2px solid var.$body-bg-color;
+            border-bottom: 2px solid var.$body-bg-color;
+
+        }
+    }
+}
+
+    .cards-section {
+        background-color: #3c2e4d;
+        padding: 4%;
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+
+        .cards-title {
+            display: flex;
+            justify-content: center;
+            gap: 3%;
+
+            .title-line {
+                border: 1px solid white;
+                height: 2px;
+                margin: auto 0;
+                width: 35%;
+
+            }
+
+            h2 {
+                font-size: 4.2rem;
+                margin: 20px 0;
+                text-align: center;
+                color: white;
+            }
+        }
+        
+        
+        .cards-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 50px;
+            padding: 4% 6%;
+            
+            .card-container {
+                background-color: var.$bg-color;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                
+                padding: 40px;
+                gap: 20px;
+                border-radius: 40px;
+                transition: .5s;
+                cursor: pointer;
+                box-shadow: 0px 5px 5px 0px #55457e;
+
+                .heart-container {
+                    display: flex;
+                    gap: 20px;
+                    
+                    .heart-img-container {
+                        width: 54px;
+                        
+                        .heart {
+                            position: relative;
+                            width: 100%;
+                        }
+                    }
+                }
+
+                .card-img {
+                    width: 100%;
+                    border-radius: 20px;
+                    display: block;
+                    
+                    img {
+                        border: 5px solid var.$primary-color;
+                        border-radius: 20px;
+                        width: 100%;
+                    }
+                }
+
+                .card-text {
+                    text-align: center;
+                    color: var.$primary-color;
+
+                    h4 {
+                        font-size: 3rem;
+                        margin-bottom: 15px;
+                        
+                    }
+                    
+                    p {
+                        font-size: 2rem;
+
+                    }
+                }
+
+                &:hover {
+                    transform: scale(1.05);
+                }
+
+                &:hover .heart {
+                    animation: heart 0.8s infinite linear;
+                }
+
+                @keyframes heart{
+                    from{scale: 1;}
+                    to{scale: 1.2;}
+                }
+
+            }
+
+            @media only screen and (min-width: 850px) and (max-width: 1250px){
+                padding: 5% 15%;
+                
+            }
+
+        }
+    }
+
+    @media (max-width: 576px) {
+        padding: 4%;
+        
+        .container {
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+
+            .hero-container {
+
+                .hero-text { 
+ 
+
+                    h1 {
+                        font-size: 3rem;
+                    }
+
+                    p {
+                        font-size: 1.4rem;  
+                    }
+                }
+            }
+
+            .aside-container {
+                .article-container {
+                    text-align: center;                
+                    
+                    h3 {
+                        font-size: 2.5rem;
+                    }
+                    
+                    p {
+                        font: 1.4rem;
+                    }
+                }   
+            }
+
+        }
+
+        .cards-section {
+
+            .cards-container {
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+                padding: 5%;
+                
+                .card-img {
+                    display: none;
+                    
+                    img {
+                        display: none;
+                    }
+                }
+            }
+        }
+
+                        
+    }
+    
+    @media (min-width: 577px) and (max-width: 768px) {
+        padding: 6%;
+        
+        .container {
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+
+            .hero-container {
+                
+                .hero-text {
+                    gap: 10px;
+                    
+                    h1 {
+                        font-size: 3.5rem;
+                    }
+                    
+                    p {
+                        font: 1.55rem;
+                    }
+                }
+            }
+            .aside-container {
+                
+                .article-container {
+                    text-align: center;                
+
+                }     
+                
+            }
+        }
+
+    }
+    
+}
