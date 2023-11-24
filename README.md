@@ -21,6 +21,10 @@ Ao abrir o projeto, no Login, você deverá inserir os seguintes dados:
 
 Após isso, você deverá clicar no botão "Login", logo abaixo dos campos de input para acessar a Home do site.
 
+## Deploy 💻
+
+Link do Deploy no Netlify: [Pixel Health](https://pixelhealth.netlify.app/)
+
 ## Funcionalidades 🔧
 
 ### Autenticação 
